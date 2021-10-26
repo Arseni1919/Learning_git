@@ -33,78 +33,95 @@ $ git init
 ```
 
 ```bash
+$ git status
+```
+
+## Adding a New File
+
+```bash
+$ git add hello.py
+$ git status
+```
+
+## Committing Changes
+
+```bash
+$ git commit -m "creating hello.py"
+[master (root-commit) 25b09b9] creating hello.py
+ 1 file changed, 3 insertions(+)
+ create mode 100755 hello.py
+
+$ git status
+On branch master
+nothing to commit, working directory clean
+```
+
+## Aside: The Staging Area
+
+### .gitignore
+
+```bash
+# .gitignore
+__pycache__
+.idea
+venv
+env
+.pytest_cache
+.coverage
+```
+
+```bash
+git commit -m "added myname module"
 
 ```
 
 ```bash
-
+$ git add .gitignore
+$ git commit -m "created .gitignore"
 ```
+
+## Git Log
 
 ```bash
-
+$ git log
 ```
+
+## Going Back In Time: Checking Out a Particular Version of Your Code
+
+...
+
+## Working with Remote Repos
+
+### Clone
 
 ```bash
-
+git clone git@github.com:jima80525/github-playground.git
 ```
+
+### Fetch
+
+...
+
+### Pull
 
 ```bash
-
+git pull
 ```
+
+### Push
 
 ```bash
-
+git push origin [branch-name]
 ```
 
-```bash
+## Putting It All Together: Simple Git Workflow
 
-```
-
-```bash
-
-```
-
-```bash
-
-```
-
-```bash
-
-```
-
-```bash
-
-```
-
-```bash
-
-```
+1. `git status` – Make sure your current area is clean.
+1. `git pull` – Get the latest version from the remote. This saves merging issues later.
+1. Edit your files and make your changes. Remember to run your linter and do unit tests!
+1. `git statu` – Find all files that are changed. Make sure to watch untracked files too!
+1. `git add [files]` – Add the changed files to the staging area.
+1. `git commit -m "message"` – Make your new commit.
+1. `git push origin [branch-name]` – Push your changes up to the remote.
 
 
-```bash
-
-```
-
-```bash
-
-```
-
-```bash
-
-```
-
-```bash
-
-```
-
-```bash
-
-```
-
-```bash
-
-```
-
-```bash
-
-```
